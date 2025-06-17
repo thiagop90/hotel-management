@@ -18,7 +18,7 @@ O design desta aplicação foi baseado em: [Room Operation - Hotel Management We
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/thiagop90/laboratory-routine.git
+git clone https://github.com/thiagop90/hotel-management.git
 ```
 
 ### 2. Instalar dependências
