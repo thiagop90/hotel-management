@@ -1,5 +1,4 @@
 import { ActionBar } from '@/components/action-bar'
-import { HotelCalendar } from '@/components/hotel-calendar'
 import { Header } from '@/components/header'
 import { NavigationTabs } from '@/components/navigation-tabs'
 import {
@@ -7,6 +6,7 @@ import {
   standardRoomsBookings,
 } from '@/constants/standard-rooms'
 import { deluxeRooms, deluxeRoomsBookings } from '@/constants/deluxe-rooms'
+import { HotelCalendar } from '@/components/hotel-calendar'
 
 export default function Home() {
   return (
@@ -24,6 +24,7 @@ export default function Home() {
           rooms={standardRooms}
           bookings={standardRoomsBookings}
           reservations={{ day: 14, qtd: 1 }}
+          type="standard"
         />
 
         <HotelCalendar
