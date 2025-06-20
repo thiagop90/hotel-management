@@ -5,21 +5,25 @@ import { standardRooms, standardReservations } from '@/constants/standard-rooms'
 import { deluxeRooms, deluxeReservations } from '@/constants/deluxe-rooms'
 import { HotelCalendar } from '@/components/hotel-calendar'
 import { AppSidebar } from '@/components/app-sidebar'
+import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 
 export default function Home() {
   return (
     <main className="w-full">
       <AppSidebar />
 
-      <div className="pl-[14.5rem]">
-        <div className="px-4 sm:px-6 lg:px-10">
+      <div className="md:pl-[14.5rem]">
+        <div className="px-4 md:px-6 lg:px-10">
           <Header />
 
-          <div className="flex w-full flex-col-reverse gap-4 lg:flex-row lg:border-b">
-            <NavigationTabs />
+          <ScrollArea className="overflow-hidden">
+            <div className="mb-2.5 flex h-full w-full gap-4 border-b">
+              <NavigationTabs />
 
-            <ActionBar />
-          </div>
+              <ActionBar />
+            </div>
+            <ScrollBar orientation="horizontal" />
+          </ScrollArea>
 
           <div className="my-8 space-y-4">
             <HotelCalendar

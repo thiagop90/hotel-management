@@ -24,7 +24,7 @@ export function NavigationTabs() {
   }, [])
 
   return (
-    <div className="flex items-center border-b lg:border-b-0">
+    <div className="flex items-center">
       <Tabs
         defaultValue="all-rooms"
         onValueChange={(value) => {
