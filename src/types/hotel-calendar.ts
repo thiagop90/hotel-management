@@ -1,24 +1,35 @@
-export interface Booking {
-  room: string
-  guest: string
-  start: number
-  duration: number
+export type Price = {
+  id: number
+  start: string
+  end: string
+  price: number
 }
 
-export interface Room {
-  id: string
+export type Room = {
+  id: number
   name: string
+  status: string
 }
 
-export interface Reservations {
-  day: number
-  qtd: number
-}
-
-export interface HotelCalendarProps {
+export type RoomType = {
+  id: number
+  name: string
   rooms: Room[]
-  bookings: Booking[]
-  reservations: Reservations
+  prices: Price[]
+}
+
+export type Reservation = {
+  id: number
+  roomId: number
+  startDate: string
+  endDate: string
+  guestName: string
+  status: 'confirmed' | 'checked-in' | 'checked-out'
+}
+
+export type HotelCalendarProps = {
+  rooms: RoomType[]
+  reservations: Reservation[]
   type: 'standard' | 'deluxe'
 }
 
