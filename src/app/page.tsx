@@ -1,19 +1,16 @@
 import { ActionBar } from '@/components/action-bar'
 import { Header } from '@/components/header'
 import { NavigationTabs } from '@/components/navigation-tabs'
-import {
-  standardRooms,
-  standardRoomsBookings,
-} from '@/constants/standard-rooms'
-import { deluxeRooms, deluxeRoomsBookings } from '@/constants/deluxe-rooms'
+import { standardRooms, standardReservations } from '@/constants/standard-rooms'
+import { deluxeRooms, deluxeReservations } from '@/constants/deluxe-rooms'
 import { HotelCalendar } from '@/components/hotel-calendar'
 
 export default function Home() {
   return (
-    <main className="w-full px-10">
+    <main className="w-full px-4 sm:px-8 lg:px-10">
       <Header />
 
-      <div className="flex w-full border-b">
+      <div className="flex w-full flex-col-reverse gap-4 lg:flex-row lg:border-b">
         <NavigationTabs />
 
         <ActionBar />
@@ -22,15 +19,13 @@ export default function Home() {
       <div className="my-8 space-y-4">
         <HotelCalendar
           rooms={standardRooms}
-          bookings={standardRoomsBookings}
-          reservations={{ day: 14, qtd: 1 }}
+          reservations={standardReservations}
           type="standard"
         />
 
         <HotelCalendar
           rooms={deluxeRooms}
-          bookings={deluxeRoomsBookings}
-          reservations={{ day: 8, qtd: 2 }}
+          reservations={deluxeReservations}
           type="deluxe"
         />
       </div>

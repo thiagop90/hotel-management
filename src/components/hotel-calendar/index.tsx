@@ -3,30 +3,55 @@
 import { HotelCalendarProps } from '@/types/hotel-calendar'
 import { HotelCalendarSidebar } from './hotel-calendar-sidebar'
 import { HotelCalendarHeader } from './hotel-calendar-header'
-import { HotelCalendarRoomsList } from './hotel-calendar-room-list'
 import { HotelCalendarBookingGrid } from './hotel-calendar-booking-grid'
+import { useRef } from 'react'
+import { useSyncScroll } from '@/hooks/use-sync-scroll'
+import { useDragToScroll } from '@/hooks/use-drag-to-scroll'
 
 export function HotelCalendar({
   rooms,
-  bookings,
   reservations,
   type,
 }: HotelCalendarProps) {
-  return (
-    <div className="relative w-full overflow-x-clip overflow-y-visible rounded-md border">
-      <div className="flex">
-        <HotelCalendarSidebar />
-        <HotelCalendarHeader />
-      </div>
+  const sidebarRef = useRef<HTMLDivElement>(null)
+  const headerRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+  const bookingRef = useRef<HTMLDivElement>(null)
 
-      <div className="flex">
-        <HotelCalendarRoomsList rooms={rooms} type={type} />
+  useSyncScroll(headerRef, sidebarRef, contentRef)
+
+  const { isDragging } = useDragToScroll(
+    contentRef,
+    sidebarRef,
+    headerRef,
+    bookingRef,
+  )
+
+  return (
+    <div className="relative flex max-h-[344px] w-full max-w-fit overflow-hidden rounded-lg border">
+      <HotelCalendarSidebar
+        rooms={rooms}
+        ref={sidebarRef}
+        isDragging={isDragging}
+        type={type}
+      />
+
+      <div className="relative flex-1 overflow-hidden">
+        <HotelCalendarHeader
+          ref={headerRef}
+          isDragging={isDragging}
+          type={type}
+        />
 
         <HotelCalendarBookingGrid
+          ref={{
+            contentRef,
+            bookingRef,
+          }}
           rooms={rooms}
-          bookings={bookings}
-          type={type}
           reservations={reservations}
+          isDragging={isDragging}
+          type={type}
         />
       </div>
     </div>

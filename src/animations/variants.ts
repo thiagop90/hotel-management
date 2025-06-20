@@ -14,20 +14,6 @@ export const bookingBarVariants: Variants = {
       ease: [0.25, 0.46, 0.45, 0.94],
     },
   },
-  hover: {
-    scale: 1.02,
-    y: -1,
-    transition: {
-      duration: 0.2,
-      ease: 'easeOut',
-    },
-  },
-  tap: {
-    scale: 0.98,
-    transition: {
-      duration: 0.1,
-    },
-  },
 }
 
 export const guestNameVariants: Variants = {
@@ -44,60 +30,54 @@ export const guestNameVariants: Variants = {
       ease: 'easeOut',
     },
   },
-  hover: {
-    scale: 1.05,
-    transition: {
-      duration: 0.2,
-    },
-  },
 }
 
-export const reservationLineVariants: Variants = {
-  hidden: {
-    scaleY: 0,
-    opacity: 0,
-  },
-  visible: {
-    scaleY: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.8,
-      delay: 0.5,
-      ease: [0.25, 0.46, 0.45, 0.94],
-    },
-  },
-}
+// export const reservationLineVariants: Variants = {
+//   hidden: {
+//     scaleY: 0,
+//     opacity: 0,
+//   },
+//   visible: {
+//     scaleY: 1,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.8,
+//       delay: 0.5,
+//       ease: [0.25, 0.46, 0.45, 0.94],
+//     },
+//   },
+// }
 
-export const reservationDotVariants: Variants = {
-  hidden: {
-    scale: 0,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-    transition: {
-      duration: 0.4,
-      delay: 0.8,
-      ease: 'backOut',
-    },
-  },
-}
+// export const reservationDotVariants: Variants = {
+//   hidden: {
+//     scale: 0,
+//     opacity: 0,
+//   },
+//   visible: {
+//     scale: 1,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.4,
+//       delay: 0.8,
+//       ease: 'backOut',
+//     },
+//   },
+// }
 
-export const tooltipVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 10,
-    scale: 0.9,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.3,
-      delay: 1,
-      ease: 'easeOut',
-    },
-  },
-}
+// export const tooltipVariants: Variants = {
+//   hidden: {
+//     opacity: 0,
+//     y: 10,
+//     scale: 0.9,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     scale: 1,
+//     transition: {
+//       duration: 0.3,
+//       delay: 1,
+//       ease: 'easeOut',
+//     },
+//   },
+// }
