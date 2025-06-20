@@ -55,7 +55,7 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
 
   return (
     <div className="my-2 space-y-1">
-      <div className="bg-background space-y-5 rounded-2xl border p-4">
+      <div className="bg-background space-y-5 rounded-t-2xl rounded-b-lg border p-4">
         <DialogTitle className="sr-only" />
         <DialogClose asChild>
           <Button size="icon" variant="outline" className="rounded-full">
@@ -112,7 +112,7 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
         </div>
       </div>
 
-      <div className="bg-background space-y-2 rounded-2xl border p-4">
+      <div className="bg-background space-y-2 rounded-lg border p-4">
         <h3 className="mt-2 text-lg leading-none font-semibold">
           Reservation details
         </h3>
@@ -163,14 +163,14 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
         </div>
       </div>
 
-      <div className="bg-background space-y-2 rounded-2xl border p-4">
+      <div className="bg-background space-y-2 rounded-lg border p-4">
         <h3 className="mt-2 text-lg leading-none font-semibold">Guest Info</h3>
 
         <div className="divide-y text-sm">
           <div className="space-y-1 py-4">
             <div className="flex items-center gap-3">
               <User className="size-4.5" />
-              <span>Ahmad Khan</span>
+              <span>{booking.guestName}</span>
             </div>
           </div>
 
@@ -184,7 +184,7 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
           <div className="space-y-1 py-4">
             <div className="flex items-center gap-3">
               <Mail className="size-4.5" />
-              <span>ahmad.khan@example.com</span>
+              <span>email@example.com</span>
             </div>
           </div>
 
@@ -197,7 +197,7 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
         </div>
       </div>
 
-      <div className="bg-background space-y-2 rounded-2xl border p-4">
+      <div className="bg-background space-y-2 rounded-t-lg rounded-b-2xl border p-4">
         <h3 className="mt-2 text-lg leading-none font-semibold">
           Payment Info
         </h3>
