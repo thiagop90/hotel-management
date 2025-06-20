@@ -18,7 +18,7 @@ import {
 
 export function AppSidebar() {
   return (
-    <Sidebar>
+    <Sidebar className="z-50">
       <SidebarHeader>
         <SidebarMenuButton className="h-12 rounded-b-none border-b">
           <div className="flex aspect-square size-8 items-center justify-center rounded-sm bg-[#A9EEC0]">
