@@ -15,8 +15,11 @@ import {
   MAIN_NAVIGATION_ITEMS,
   SYSTEM_OPTIONS_ITEMS,
 } from '@/constants/sidebar-items'
+import { useTranslations } from 'next-intl'
 
 export function AppSidebar() {
+  const t = useTranslations('Sidebar')
+
   return (
     <Sidebar className="z-50">
       <SidebarHeader>
@@ -43,7 +46,7 @@ export function AppSidebar() {
                   >
                     <a href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span>{t(item.title)}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -54,7 +57,7 @@ export function AppSidebar() {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-muted-foreground px-5">
-            System Options
+            {t('systemOptions')}
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="gap-0.5">
@@ -66,7 +69,7 @@ export function AppSidebar() {
                   >
                     <a href={item.url}>
                       <item.icon />
-                      <span>{item.title}</span>
+                      <span>{t(item.title)}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>

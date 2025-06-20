@@ -35,7 +35,7 @@ export function BookingBarCard({ booking, type }: BookingBarCardProps) {
             <div className="space-y-0.5">
               <p className="">{startDate.format('ddd, MMM D')}</p>
               <p className="text-muted-foreground">
-                {startDate.format('h:mm A')}
+                {startDate.format('HH:mm')}
               </p>
             </div>
           </div>
@@ -45,9 +45,7 @@ export function BookingBarCard({ booking, type }: BookingBarCardProps) {
 
             <div className="space-y-0.5">
               <p>{endDate.format('ddd, MMM D')}</p>
-              <p className="text-muted-foreground">
-                {endDate.format('h:mm A')}
-              </p>
+              <p className="text-muted-foreground">{endDate.format('HH:mm')}</p>
             </div>
           </div>
         </div>

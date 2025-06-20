@@ -1,8 +1,11 @@
 import { motion } from 'motion/react'
 import dayjs from 'dayjs'
+import 'dayjs/locale/pt-br'
+import 'dayjs/locale/en'
 import { cn } from '@/lib/utils'
 import { calculateGridWidth } from '@/lib/calendar-dimensions'
 import { typeColors } from '@/types/hotel-calendar'
+import { useLocale } from 'next-intl'
 
 interface HotelCalendarHeaderProps {
   isDragging: boolean
@@ -15,6 +18,9 @@ export function HotelCalendarHeader({
   type,
   ...props
 }: React.ComponentProps<'div'> & HotelCalendarHeaderProps) {
+  const locale = useLocale()
+  dayjs.locale(locale)
+
   const currentDate = dayjs().startOf('month')
   const daysCount = currentDate.daysInMonth()
   const today = dayjs().startOf('day')

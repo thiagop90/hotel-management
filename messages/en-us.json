@@ -1,0 +1,80 @@
+{
+  "Sidebar": {
+    "dashboard": "Dashboard",
+    "roomOperation": "Room Operation",
+    "guestLookup": "Guest Look-up",
+    "houseStatus": "House Status",
+    "tariffChart": "Tariff Chart",
+    "taskManagement": "Task Management",
+    "webReservation": "Web Reservation",
+    "reports": "Reports",
+    "systemOptions": "System Options",
+    "settings": "Settings",
+    "helpSupport": "Help & Support",
+    "upgrade": "Upgrade",
+    "languageRegion": "Language & Region"
+  },
+  "OperationRoomsPage": {
+    "Header": {
+      "learn": "Learn",
+      "allRooms": "All Rooms"
+    },
+    "Navigation": {
+      "allRooms": "All Rooms",
+      "checkInRooms": "Check in Rooms",
+      "checkOutRooms": "Checkout Rooms",
+      "addNew": "Add New",
+      "filter": "Filter",
+      "sort": "Sort",
+      "new": "New"
+    },
+    "Calendar": {
+      "fullMonth": "Full month",
+      "allRooms": "All Rooms"
+    }
+  },
+  "Rooms": {
+    "standardRooms": "Standard Rooms",
+    "standardRoom101": "Standard Room 101",
+    "standardRoom102": "Standard Room 102",
+    "standardRoom103": "Standard Room 103",
+    "standardRoom104": "Standard Room 104",
+    "standardRoom105": "Standard Room 105",
+    "standardRoom106": "Standard Room 106",
+    "standardRoom107": "Standard Room 107",
+    "standardRoom108": "Standard Room 108",
+
+    "deluxeRooms": "Deluxe Rooms",
+    "deluxeRoom101": "Deluxe Room 101",
+    "deluxeRoom102": "Deluxe Room 102",
+    "deluxeRoom103": "Deluxe Room 103",
+    "deluxeRoom104": "Deluxe Room 104",
+    "deluxeRoom105": "Deluxe Room 105",
+    "deluxeRoom106": "Deluxe Room 106",
+    "deluxeRoom107": "Deluxe Room 107",
+    "deluxeRoom108": "Deluxe Room 108",
+
+    "needsCleaning": "Needs Cleaning",
+    "clean": "Clean"
+  },
+  "BookingDialog": {
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "reservationDetails": "Reservation Details",
+    "status": "Status",
+    "guests": "Guests",
+    "guestExample": "2 adults, 1 child",
+    "confirmationCode": "Confirmation Code",
+    "cancellationPolicy": "Cancellation Policy",
+    "freeCancellation": "Free cancellation before {time} on {date}",
+    "readMore": "Read more",
+    "manageGuests": "Manage guests",
+    "changeReservation": "Change reservation",
+    "cancelReservation": "Cancel reservation",
+    "guestInfo": "Guest Info",
+    "paymentInfo": "Payment Info",
+    "paymentDetails": "Payment Details",
+    "totalCost": "Total cost: {amount}",
+    "getReceipts": "Get receipts"
+  }
+}

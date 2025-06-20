@@ -1,0 +1,80 @@
+{
+  "Sidebar": {
+    "dashboard": "Painel",
+    "roomOperation": "Operação de Quartos",
+    "guestLookup": "Consulta de Hóspedes",
+    "houseStatus": "Status da Casa",
+    "tariffChart": "Tabela de Tarifas",
+    "taskManagement": "Gerenciamento de Tarefas",
+    "webReservation": "Reserva Web",
+    "reports": "Relatórios",
+    "systemOptions": "Opções do Sistema",
+    "settings": "Configurações",
+    "helpSupport": "Ajuda e Suporte",
+    "upgrade": "Atualizar",
+    "languageRegion": "Idioma e Região"
+  },
+  "OperationRoomsPage": {
+    "Header": {
+      "learn": "Aprender",
+      "allRooms": "Todos os Quartos"
+    },
+    "Navigation": {
+      "allRooms": "Todos os Quartos",
+      "checkInRooms": "Quartos para Check-in",
+      "checkOutRooms": "Quartos para Check-out",
+      "addNew": "Adicionar Novo",
+      "filter": "Filtrar",
+      "sort": "Ordenar",
+      "new": "Novo"
+    },
+    "Calendar": {
+      "fullMonth": "Mês completo",
+      "allRooms": "Todos os Quartos"
+    }
+  },
+  "Rooms": {
+    "standardRooms": "Quartos Padrão",
+    "standardRoom101": "Quarto Padrão 101",
+    "standardRoom102": "Quarto Padrão 102",
+    "standardRoom103": "Quarto Padrão 103",
+    "standardRoom104": "Quarto Padrão 104",
+    "standardRoom105": "Quarto Padrão 105",
+    "standardRoom106": "Quarto Padrão 106",
+    "standardRoom107": "Quarto Padrão 107",
+    "standardRoom108": "Quarto Padrão 108",
+
+    "deluxeRooms": "Quartos Luxo",
+    "deluxeRoom101": "Quarto Luxo 101",
+    "deluxeRoom102": "Quarto Luxo 102",
+    "deluxeRoom103": "Quarto Luxo 103",
+    "deluxeRoom104": "Quarto Luxo 104",
+    "deluxeRoom105": "Quarto Luxo 105",
+    "deluxeRoom106": "Quarto Luxo 106",
+    "deluxeRoom107": "Quarto Luxo 107",
+    "deluxeRoom108": "Quarto Luxo 108",
+
+    "needsCleaning": "Precisa de Limpeza",
+    "clean": "Limpo"
+  },
+   "BookingDialog": {
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "reservationDetails": "Detalhes da Reserva",
+    "status": "Status",
+    "guests": "Hóspedes",
+    "guestExample": "2 adultos, 1 criança",
+    "confirmationCode": "Código de Confirmação",
+    "cancellationPolicy": "Política de Cancelamento",
+    "freeCancellation": "Cancelamento grátis antes das {time} em {date}",
+    "readMore": "Leia mais",
+    "manageGuests": "Gerenciar hóspedes",
+    "changeReservation": "Alterar reserva",
+    "cancelReservation": "Cancelar reserva",
+    "guestInfo": "Informações do Hóspede",
+    "paymentInfo": "Informações de Pagamento",
+    "paymentDetails": "Detalhes do Pagamento",
+    "totalCost": "Custo total: {amount}",
+    "getReceipts": "Obter recibos"
+  }
+}

@@ -1,14 +1,17 @@
 import { ChevronDown, MoreHorizontal, Search } from 'lucide-react'
 import { Button } from './ui/button'
+import { useTranslations } from 'next-intl'
 
 export function ActionBar() {
+  const t = useTranslations('OperationRoomsPage.Navigation')
+
   return (
     <div className="ml-auto flex items-center">
       <Button className="text-muted-foreground" variant="ghost" size="sm">
-        Filter
+        {t('filter')}
       </Button>
       <Button className="text-muted-foreground" variant="ghost" size="sm">
-        Sort
+        {t('sort')}
       </Button>
       <Button
         className="text-muted-foreground size-8"
@@ -30,7 +33,7 @@ export function ActionBar() {
           size="sm"
           className="text-primary-foreground rounded-none rounded-s-sm bg-[#2679FF] shadow-none hover:bg-[#2679FF]/80 focus-visible:z-10"
         >
-          New
+          {t('new')}
         </Button>
         <Button
           className="text-primary-foreground size-8 rounded-none rounded-e-sm border-l bg-[#2679FF] shadow-none hover:bg-[#2679FF]/80 focus-visible:z-10"

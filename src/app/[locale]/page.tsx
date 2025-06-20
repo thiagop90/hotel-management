@@ -12,7 +12,7 @@ export default function Home() {
     <main className="w-full">
       <AppSidebar />
 
-      <div className="md:pl-[14.5rem]">
+      <div className="md:pl-[16rem]">
         <div className="px-4 md:px-6 lg:px-10">
           <Header />
 

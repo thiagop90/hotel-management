@@ -1,3 +1,5 @@
+import type { Messages } from 'next-intl'
+
 export type Price = {
   id: number
   start: string
@@ -7,13 +9,13 @@ export type Price = {
 
 export type Room = {
   id: number
-  name: string
+  name: keyof Messages['Rooms']
   status: string
 }
 
 export type RoomType = {
   id: number
-  name: string
+  name: keyof Messages['Rooms']
   rooms: Room[]
   prices: Price[]
 }

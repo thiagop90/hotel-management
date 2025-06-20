@@ -8,8 +8,10 @@ import { useCalendarFilterStore } from '@/store/hotel-calendar-store'
 import { useMemo } from 'react'
 import { standardReservations } from '@/constants/standard-rooms'
 import { deluxeReservations } from '@/constants/deluxe-rooms'
+import { useTranslations } from 'next-intl'
 
 export function NavigationTabs() {
+  const t = useTranslations('OperationRoomsPage.Navigation')
   const { setStatus } = useCalendarFilterStore()
 
   const counts = useMemo(() => {
@@ -35,7 +37,7 @@ export function NavigationTabs() {
       >
         <TabsList className="text-foreground h-auto gap-2 rounded-none bg-transparent px-0 py-1">
           <TabsTrigger value="all-rooms">
-            All Rooms{' '}
+            {t('allRooms')}{' '}
             <Badge
               className="rounded-full bg-[#E4E6E7] px-1.5 py-px text-[#6E7072]"
               variant="secondary"
@@ -44,7 +46,7 @@ export function NavigationTabs() {
             </Badge>
           </TabsTrigger>
           <TabsTrigger value="check-in-rooms">
-            Check in Rooms
+            {t('checkInRooms')}
             <Badge
               className="rounded-full bg-[#E4E6E7] px-1.5 py-px text-[#6E7072]"
               variant="secondary"
@@ -53,7 +55,7 @@ export function NavigationTabs() {
             </Badge>
           </TabsTrigger>
           <TabsTrigger value="checkout-rooms">
-            Checkout Rooms{' '}
+            {t('checkOutRooms')}{' '}
             <Badge
               className="rounded-full bg-[#E4E6E7] px-1.5 py-px text-[#6E7072]"
               variant="secondary"
@@ -66,7 +68,7 @@ export function NavigationTabs() {
 
       <Button className="text-muted-foreground ml-4" variant="ghost">
         <Plus />
-        Add New
+        {t('addNew')}
       </Button>
     </div>
   )

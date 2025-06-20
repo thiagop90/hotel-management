@@ -26,12 +26,15 @@ import {
 } from '@/components/ui/carousel'
 import Image from 'next/image'
 import dayjs from 'dayjs'
+import { useTranslations } from 'next-intl'
 
 interface BookingBarDialogProps {
   booking: Reservation
 }
 
 export function BookingBarDialog({ booking }: BookingBarDialogProps) {
+  const t = useTranslations('BookingDialog')
+
   const startDate = dayjs(booking.startDate)
   const endDate = dayjs(booking.endDate)
 
@@ -89,24 +92,20 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
 
         <div className="bg-secondary grid grid-cols-[1fr_auto_1fr] rounded-xl px-5 py-4 text-sm">
           <div className="space-y-1.5 text-left">
-            <p className="font-semibold">Check-in</p>
-
+            <p className="font-semibold">{t('checkIn')}</p>
             <div className="space-y-0.5">
-              <p className="">{startDate.format('ddd, MMM D')}</p>
+              <p>{startDate.format('ddd, D MMM')}</p>
               <p className="text-muted-foreground">
-                {startDate.format('h:mm A')}
+                {startDate.format('HH:mm')}
               </p>
             </div>
           </div>
           <Separator orientation="vertical" />
           <div className="space-y-1 text-right">
-            <p className="font-semibold">Checkout</p>
-
+            <p className="font-semibold">{t('checkOut')}</p>
             <div className="space-y-0.5">
-              <p>{endDate.format('ddd, MMM D')}</p>
-              <p className="text-muted-foreground">
-                {endDate.format('h:mm A')}
-              </p>
+              <p>{endDate.format('ddd, D MMM')}</p>
+              <p className="text-muted-foreground">{endDate.format('HH:mm')}</p>
             </div>
           </div>
         </div>
@@ -114,57 +113,60 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
 
       <div className="bg-background space-y-2 rounded-lg border p-4">
         <h3 className="mt-2 text-lg leading-none font-semibold">
-          Reservation details
+          {t('reservationDetails')}
         </h3>
 
         <div className="divide-y text-sm">
           <div className="space-y-1 py-5">
-            <p className="font-semibold">Status</p>
+            <p className="font-semibold">{t('status')}</p>
             <Badge variant="outline" className="px-2.5 py-1">
               {booking.status}
             </Badge>
           </div>
           <div className="space-y-1 py-5">
-            <p className="font-semibold">Guests</p>
-            <span>2 adults, 1 child</span>
+            <p className="font-semibold">{t('guests')}</p>
+            <span>{t('guestExample')}</span>
           </div>
           <div className="space-y-1 py-5">
-            <p className="font-semibold">Confirmation code</p>
+            <p className="font-semibold">{t('confirmationCode')}</p>
             <span>HMKFZW9A5Z</span>
           </div>
 
           <div className="space-y-2 py-5">
-            <p className="font-semibold">Cancellation policy</p>
+            <p className="font-semibold">{t('cancellationPolicy')}</p>
             <p>
-              Free cancellation before {startDate.format('h:mm A')} on{' '}
-              {startDate.format('MMM D')}
+              {t('freeCancellation', {
+                time: startDate.format('HH:mm'),
+                date: startDate.format('D [de] MMM'),
+              })}
             </p>
-
             <a href="#" className="font-medium underline">
-              Read more
+              {t('readMore')}
             </a>
           </div>
 
           <button className="flex w-full cursor-pointer items-center gap-3 py-4">
             <Users className="size-4.5" />
-            <span>Manage guests</span>
+            <span>{t('manageGuests')}</span>
             <ChevronRight className="ml-auto size-4" />
           </button>
           <button className="flex w-full cursor-pointer items-center gap-3 py-4">
             <Edit2 className="size-4.5" />
-            <span>Change reservation</span>
+            <span>{t('changeReservation')}</span>
             <ChevronRight className="ml-auto size-4" />
           </button>
           <button className="flex w-full cursor-pointer items-center gap-3 py-4">
             <XCircle className="size-4.5" />
-            <span>Cancel reservation</span>
+            <span>{t('cancelReservation')}</span>
             <ChevronRight className="ml-auto size-4" />
           </button>
         </div>
       </div>
 
       <div className="bg-background space-y-2 rounded-lg border p-4">
-        <h3 className="mt-2 text-lg leading-none font-semibold">Guest Info</h3>
+        <h3 className="mt-2 text-lg leading-none font-semibold">
+          {t('guestInfo')}
+        </h3>
 
         <div className="divide-y text-sm">
           <div className="space-y-1 py-4">
@@ -199,17 +201,17 @@ export function BookingBarDialog({ booking }: BookingBarDialogProps) {
 
       <div className="bg-background space-y-2 rounded-t-lg rounded-b-2xl border p-4">
         <h3 className="mt-2 text-lg leading-none font-semibold">
-          Payment Info
+          {t('paymentInfo')}
         </h3>
 
         <div className="divide-y text-sm">
           <div className="space-y-1 pt-5 pb-3">
-            <h4 className="font-semibold">Payment details</h4>
-            <span>Total cost: $855.88</span>
+            <h4 className="font-semibold">{t('paymentDetails')}</h4>
+            <span>{t('totalCost', { amount: '$855.88' })}</span>
           </div>
           <button className="flex w-full cursor-pointer items-center gap-3 py-4">
             <ReceiptText className="size-4.5" />
-            <span>Get receipts</span>
+            <span>{t('getReceipts')}</span>
             <ChevronRight className="ml-auto size-4" />
           </button>
         </div>

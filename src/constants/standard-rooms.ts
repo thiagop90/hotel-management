@@ -70,21 +70,17 @@ export const standardReservations: Reservation[] = [
 export const standardRooms: RoomType[] = [
   {
     id: 1,
-    name: 'Standard Rooms',
+    name: 'standardRooms',
     rooms: [
-      { id: 1, name: 'Standard Room 101', status: 'Needs Cleaning' },
-      { id: 2, name: 'Standard Room 102', status: 'Needs Cleaning' },
-      { id: 3, name: 'Standard Room 103', status: 'Clean' },
-      { id: 4, name: 'Standard Room 104', status: 'Clean' },
-      { id: 5, name: 'Standard Room 105', status: 'Clean' },
-      { id: 6, name: 'Standard Room 106', status: 'Clean' },
-      { id: 7, name: 'Standard Room 107', status: 'Clean' },
-      { id: 8, name: 'Standard Room 108', status: 'Clean' },
+      { id: 1, name: 'standardRoom101', status: '' },
+      { id: 2, name: 'standardRoom102', status: '' },
+      { id: 3, name: 'standardRoom103', status: '' },
+      { id: 4, name: 'standardRoom104', status: '' },
+      { id: 5, name: 'standardRoom105', status: '' },
+      { id: 6, name: 'standardRoom106', status: '' },
+      { id: 7, name: 'standardRoom107', status: '' },
+      { id: 8, name: 'standardRoom108', status: '' },
     ],
-    prices: [
-      // { id: 1, start: '2025-06-01', end: '2025-06-10', price: 255 },
-      // { id: 2, start: '2024-09-11', end: '2024-09-20', price: 300 },
-      // { id: 3, start: '2024-09-21', end: '2024-09-30', price: 155 },
-    ],
+    prices: [],
   },
 ]

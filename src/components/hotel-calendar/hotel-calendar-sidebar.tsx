@@ -3,6 +3,7 @@ import { Button } from '../ui/button'
 import { cn } from '@/lib/utils'
 import { typeColors, type RoomType } from '@/types/hotel-calendar'
 import { motion } from 'motion/react'
+import { useTranslations } from 'next-intl'
 
 interface HotelCalendarSidebarProps {
   rooms: RoomType[]
@@ -17,6 +18,9 @@ export function HotelCalendarSidebar({
   type,
   ...props
 }: React.ComponentProps<'div'> & HotelCalendarSidebarProps) {
+  const tCalendar = useTranslations('OperationRoomsPage.Calendar')
+  const t = useTranslations('Rooms')
+
   const colors = typeColors[type]
 
   return (
@@ -31,7 +35,7 @@ export function HotelCalendarSidebar({
             variant="outline"
             className="text-muted-foreground h-7 flex-1 justify-start rounded-sm"
           >
-            <CalendarDays /> Full month
+            <CalendarDays /> {tCalendar('fullMonth')}
           </Button>
           <Button
             size="icon"
@@ -42,7 +46,7 @@ export function HotelCalendarSidebar({
           </Button>
         </div>
         <span className="text-muted-foreground text-sm font-medium uppercase">
-          All Rooms
+          {tCalendar('allRooms')}
         </span>
       </div>
 
@@ -69,7 +73,7 @@ export function HotelCalendarSidebar({
                   backgroundColor: colors.primary,
                 }}
               />
-              <p className="ml-2 font-semibold uppercase">{roomType.name}</p>
+              <p className="ml-2 font-semibold uppercase">{t(roomType.name)}</p>
               <ChevronUp className="ml-3 h-5 w-5" />
             </div>
             {roomType.rooms.map((room, index) => (
@@ -84,7 +88,7 @@ export function HotelCalendarSidebar({
                   }}
                   className="text-sm font-medium"
                 >
-                  {room.name}
+                  {t(room.name)}
                 </motion.p>
               </div>
             ))}

@@ -70,21 +70,17 @@ export const deluxeReservations: Reservation[] = [
 export const deluxeRooms: RoomType[] = [
   {
     id: 1,
-    name: 'Deluxe Rooms',
+    name: 'deluxeRooms',
     rooms: [
-      { id: 1, name: 'Deluxe Room 101', status: 'Needs Cleaning' },
-      { id: 2, name: 'Deluxe Room 102', status: 'Needs Cleaning' },
-      { id: 3, name: 'Deluxe Room 103', status: 'Clean' },
-      { id: 4, name: 'Deluxe Room 104', status: 'Clean' },
-      { id: 5, name: 'Deluxe Room 105', status: 'Clean' },
-      { id: 6, name: 'Deluxe Room 106', status: 'Clean' },
-      { id: 7, name: 'Deluxe Room 107', status: 'Clean' },
-      { id: 8, name: 'Deluxe Room 108', status: 'Clean' },
+      { id: 1, name: 'deluxeRoom101', status: 'needsCleaning' },
+      { id: 2, name: 'deluxeRoom102', status: 'needsCleaning' },
+      { id: 3, name: 'deluxeRoom103', status: 'clean' },
+      { id: 4, name: 'deluxeRoom104', status: 'clean' },
+      { id: 5, name: 'deluxeRoom105', status: 'clean' },
+      { id: 6, name: 'deluxeRoom106', status: 'clean' },
+      { id: 7, name: 'deluxeRoom107', status: 'clean' },
+      { id: 8, name: 'deluxeRoom108', status: 'clean' },
     ],
-    prices: [
-      // { id: 1, start: '2025-06-01', end: '2025-06-10', price: 255 },
-      // { id: 2, start: '2024-09-11', end: '2024-09-20', price: 300 },
-      // { id: 3, start: '2024-09-21', end: '2024-09-30', price: 155 },
-    ],
+    prices: [],
   },
 ]

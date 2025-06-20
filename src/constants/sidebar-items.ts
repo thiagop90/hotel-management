@@ -1,62 +1,63 @@
 import {
+  BedDouble,
   ChartLine,
   CircleArrowUp,
   ClipboardList,
   Globe2,
   HelpCircle,
-  Home,
-  HousePlug,
+  House,
   Layout,
   Monitor,
   Settings,
   UserCircle2,
   type LucideIcon,
 } from 'lucide-react'
+import type { Messages } from 'next-intl'
 
 type SidebarItem = {
-  title: string
+  title: keyof Messages['Sidebar']
   url: string
   icon: LucideIcon
 }
 
 export const MAIN_NAVIGATION_ITEMS: SidebarItem[] = [
   {
-    title: 'Dashboard',
+    title: 'dashboard',
     url: '#',
     icon: Layout,
   },
   {
-    title: 'Room Operation',
+    title: 'roomOperation',
     url: '#',
-    icon: Home,
+    icon: BedDouble,
   },
   {
-    title: 'Guest Look-up',
+    title: 'guestLookup',
     url: '#',
     icon: UserCircle2,
   },
   {
-    title: 'House Status',
+    title: 'houseStatus',
     url: '#',
-    icon: HousePlug,
+    icon: House,
   },
   {
-    title: 'Tariff Chart',
+    title: 'tariffChart',
     url: '#',
     icon: ChartLine,
   },
   {
-    title: 'Task Management',
+    title: 'taskManagement',
     url: '#',
     icon: ClipboardList,
   },
   {
-    title: 'Web Reservation',
+    title: 'webReservation',
     url: '#',
     icon: Monitor,
   },
   {
-    title: 'Reports',
+    title: 'reports',
     url: '#',
     icon: Monitor,
   },
@@ -64,22 +65,22 @@ export const MAIN_NAVIGATION_ITEMS: SidebarItem[] = [
 
 export const SYSTEM_OPTIONS_ITEMS: SidebarItem[] = [
   {
-    title: 'Settings',
+    title: 'settings',
     url: '#',
     icon: Settings,
   },
   {
-    title: 'Help & Support',
+    title: 'helpSupport',
     url: '#',
     icon: HelpCircle,
   },
   {
-    title: 'Upgrade',
+    title: 'upgrade',
     url: '#',
     icon: CircleArrowUp,
   },
   {
-    title: 'Language & Region',
+    title: 'languageRegion',
     url: '#',
     icon: Globe2,
   },
