@@ -22,31 +22,31 @@ export function AvailabilityBar({
 }: AvailabilityBarProps) {
   const available = Math.max(total - sold - standby, 0)
 
-  const soldPercent = (sold / total) * 100
-  const standbyPercent = (standby / total) * 100
-  const availablePercent = (available / total) * 100
+  const soldPercent = total > 0 ? (sold / total) * 100 : 0
+  const standbyPercent = total > 0 ? (standby / total) * 100 : 0
+  const availablePercent = total > 0 ? (available / total) * 100 : 0
 
-  const allData = [
+  const barSegments = [
     {
-      id: 'soldOut' as FilterType,
-      label: 'Vendidos',
-      value: sold,
-      percent: soldPercent,
-      color: 'bg-blue-400',
-    },
-    {
-      id: 'standby' as FilterType,
-      label: 'Standby',
-      value: standby,
-      percent: standbyPercent,
-      color: 'bg-emerald-400',
-    },
-    {
-      id: 'available' as FilterType,
+      id: 'available',
       label: 'Disponíveis',
       value: available,
       percent: availablePercent,
+      color: 'bg-emerald-400',
+    },
+    {
+      id: 'soldOut',
+      label: 'Vendidos',
+      value: sold,
+      percent: soldPercent,
       color: 'bg-red-400',
+    },
+    {
+      id: 'standby',
+      label: 'Standby',
+      value: standby,
+      percent: standbyPercent,
+      color: 'bg-blue-400',
     },
   ]
 
@@ -69,9 +69,9 @@ export function AvailabilityBar({
   // Determina quais dados mostrar baseado no filtro ativo
   function getVisibleData() {
     if (activeFilter === 'all') {
-      return allData
+      return barSegments
     }
-    return allData.filter((item) => item.id === activeFilter)
+    return barSegments.filter((item) => item.id === activeFilter)
   }
 
   const visibleData = getVisibleData()
@@ -87,14 +87,14 @@ export function AvailabilityBar({
             <div className="flex h-1.5 w-full overflow-hidden rounded-sm">
               {activeFilter === 'all'
                 ? // Mostra todas as cores com porcentagens originais
-                  allData.map(({ percent, color }, index) => (
+                  barSegments.map(({ percent, color }, index) => (
                     <div
                       key={index}
                       className={color}
                       style={{ width: `${percent}%` }}
                     />
                   ))
-                : // Mostra apenas a cor do filtro selecionado ocupando 100% da largura
+                : // Mostra apenas a cor do filtro selecionado
                   visibleData.map(({ color }, index) => (
                     <div
                       key={index}
@@ -113,7 +113,7 @@ export function AvailabilityBar({
           <div className="text-sm font-semibold">{hour}</div>
 
           <div className="space-y-1.5">
-            {allData.map(({ id, label, value, percent, color }) => {
+            {barSegments.map(({ id, label, value, percent, color }) => {
               const isHighlighted =
                 activeFilter === 'all' || activeFilter === id
               return (

@@ -20,19 +20,19 @@ export function AvailabilityFilters({
       color: 'bg-gradient-to-r from-blue-400 via-emerald-400 to-red-400',
     },
     {
-      value: 'soldOut' as FilterType,
-      label: 'Vendidos',
-      color: 'bg-blue-400',
-    },
-    {
       value: 'available' as FilterType,
       label: 'Disponíveis',
+      color: 'bg-emerald-400',
+    },
+    {
+      value: 'soldOut' as FilterType,
+      label: 'Vendidos',
       color: 'bg-red-400',
     },
     {
       value: 'standby' as FilterType,
       label: 'Standby',
-      color: 'bg-emerald-400',
+      color: 'bg-blue-400',
     },
   ]
 

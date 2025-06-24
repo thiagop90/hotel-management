@@ -17,13 +17,11 @@ export default function AvailabilityPage() {
         onFilterChange={setActiveFilter}
       />
 
-      <div className="rounded-xl border p-2">
-        <div className="divide-y overflow-hidden rounded-lg border">
-          <AvailabilityTable
-            data={availabilityData}
-            activeFilter={activeFilter}
-          />
-        </div>
+      <div className="w-full rounded-xl border p-2">
+        <AvailabilityTable
+          data={availabilityData}
+          activeFilter={activeFilter}
+        />
       </div>
     </main>
   )

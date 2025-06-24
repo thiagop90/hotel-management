@@ -40,7 +40,7 @@ export function ScrollableContainer({
       onMouseUp={endDrag}
       onMouseLeave={endDrag}
       className={cn(
-        'scrollbar-custom overflow-auto select-none',
+        'overflow-hidden rounded-lg border',
         drag ? 'cursor-grabbing' : 'cursor-grab',
         className,
       )}
